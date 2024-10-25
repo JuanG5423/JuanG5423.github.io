@@ -6,9 +6,10 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sockg_class: <https://JuanG5423.github.io/docs/classes/> .
 @prefix sockg_data_property: <https://JuanG5423.github.io/docs/dataproperties/> .
-@base <https://JuanG5423.github.io/docs/classes> .
+@prefix sockg_object_property: <https://JuanG5423.github.io/docs/objectproperties/> .
+@base <http://www.semanticweb.org/sockg/ontologies/2024/0/soil-carbon-ontology> .
 
-<https://JuanG5423.github.io/docs/classes> rdf:type owl:Ontology .
+<http://www.semanticweb.org/sockg/ontologies/2024/0/soil-carbon-ontology> rdf:type owl:Ontology .
 
 #################################################################
 #    Datatypes
@@ -26,394 +27,394 @@ xsd:time rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
-###  https://JuanG5423.github.io/docs/classes/appliedInExpUnit
-sockg_class:appliedInExpUnit rdf:type owl:ObjectProperty ;
-                             rdfs:domain sockg_class:Treatment ;
-                             rdfs:range sockg_class:ExperimentalUnit .
+###  https://JuanG5423.github.io/docs/objectproperties/appliedInExpUnit
+sockg_object_property:appliedInExpUnit rdf:type owl:ObjectProperty ;
+                                       rdfs:domain sockg_class:Treatment ;
+                                       rdfs:range sockg_class:ExperimentalUnit .
 
 
-###  https://JuanG5423.github.io/docs/classes/appliedInField
-sockg_class:appliedInField rdf:type owl:ObjectProperty ;
-                           rdfs:domain sockg_class:Soil ;
-                           rdfs:range sockg_class:Field .
+###  https://JuanG5423.github.io/docs/objectproperties/appliedInField
+sockg_object_property:appliedInField rdf:type owl:ObjectProperty ;
+                                     rdfs:domain sockg_class:Soil ;
+                                     rdfs:range sockg_class:Field .
 
 
-###  https://JuanG5423.github.io/docs/classes/appliedOnSoil
-sockg_class:appliedOnSoil rdf:type owl:ObjectProperty ;
-                          rdfs:domain sockg_class:Treatment ;
-                          rdfs:range sockg_class:Soil .
+###  https://JuanG5423.github.io/docs/objectproperties/appliedOnSoil
+sockg_object_property:appliedOnSoil rdf:type owl:ObjectProperty ;
+                                    rdfs:domain sockg_class:Treatment ;
+                                    rdfs:range sockg_class:Soil .
 
 
-###  https://JuanG5423.github.io/docs/classes/departmentOf
-sockg_class:departmentOf rdf:type owl:ObjectProperty ;
-                         rdfs:domain sockg_class:Department ;
-                         rdfs:range sockg_class:Organization .
+###  https://JuanG5423.github.io/docs/objectproperties/departmentOf
+sockg_object_property:departmentOf rdf:type owl:ObjectProperty ;
+                                   rdfs:domain sockg_class:Department ;
+                                   rdfs:range sockg_class:Organization .
 
 
-###  https://JuanG5423.github.io/docs/classes/fundsExperiment
-sockg_class:fundsExperiment rdf:type owl:ObjectProperty ;
-                            rdfs:domain sockg_class:Organization ;
-                            rdfs:range sockg_class:Experiment .
+###  https://JuanG5423.github.io/docs/objectproperties/fundsExperiment
+sockg_object_property:fundsExperiment rdf:type owl:ObjectProperty ;
+                                      rdfs:domain sockg_class:Organization ;
+                                      rdfs:range sockg_class:Experiment .
 
 
-###  https://JuanG5423.github.io/docs/classes/happenedAtResearchUnit
-sockg_class:happenedAtResearchUnit rdf:type owl:ObjectProperty ;
-                                   rdfs:domain sockg_class:Experiment ;
-                                   rdfs:range sockg_class:ResearchUnit .
+###  https://JuanG5423.github.io/docs/objectproperties/happenedAtResearchUnit
+sockg_object_property:happenedAtResearchUnit rdf:type owl:ObjectProperty ;
+                                             rdfs:domain sockg_class:Experiment ;
+                                             rdfs:range sockg_class:ResearchUnit .
 
 
-###  https://JuanG5423.github.io/docs/classes/happenedInSite
-sockg_class:happenedInSite rdf:type owl:ObjectProperty ;
-                           rdfs:domain sockg_class:Experiment ;
-                           rdfs:range sockg_class:Site .
+###  https://JuanG5423.github.io/docs/objectproperties/happenedInSite
+sockg_object_property:happenedInSite rdf:type owl:ObjectProperty ;
+                                     rdfs:domain sockg_class:Experiment ;
+                                     rdfs:range sockg_class:Site .
 
 
-###  https://JuanG5423.github.io/docs/classes/hasAmendment
-sockg_class:hasAmendment rdf:type owl:ObjectProperty ;
-                         rdfs:domain sockg_class:ExperimentalUnit ;
-                         rdfs:range sockg_class:Amendment .
-
-
-###  https://JuanG5423.github.io/docs/classes/hasBioMassCarbohydrateData
-sockg_class:hasBioMassCarbohydrateData rdf:type owl:ObjectProperty ;
-                                       rdfs:domain sockg_class:ExperimentalUnit ;
-                                       rdfs:range sockg_class:BioMassCarbohydrate .
-
-
-###  https://JuanG5423.github.io/docs/classes/hasBioMassEnergyData
-sockg_class:hasBioMassEnergyData rdf:type owl:ObjectProperty ;
-                                 rdfs:domain sockg_class:ExperimentalUnit ;
-                                 rdfs:range sockg_class:BioMassEnergy .
-
-
-###  https://JuanG5423.github.io/docs/classes/hasBioMassMineralData
-sockg_class:hasBioMassMineralData rdf:type owl:ObjectProperty ;
-                                  rdfs:domain sockg_class:ExperimentalUnit ;
-                                  rdfs:range sockg_class:BioMassMineral .
-
-
-###  https://JuanG5423.github.io/docs/classes/hasBioSample
-sockg_class:hasBioSample rdf:type owl:ObjectProperty ;
-                         rdfs:domain sockg_class:ExperimentalUnit ;
-                         rdfs:range sockg_class:SoilBiologicalSample .
-
-
-###  https://JuanG5423.github.io/docs/classes/hasChemSample
-sockg_class:hasChemSample rdf:type owl:ObjectProperty ;
-                          rdfs:domain sockg_class:ExperimentalUnit ;
-                          rdfs:range sockg_class:SoilChemicalSample .
-
-
-###  https://JuanG5423.github.io/docs/classes/hasCity
-sockg_class:hasCity rdf:type owl:ObjectProperty ;
-                    rdfs:domain sockg_class:County ;
-                    rdfs:range sockg_class:City .
-
-
-###  https://JuanG5423.github.io/docs/classes/hasCounty
-sockg_class:hasCounty rdf:type owl:ObjectProperty ;
-                      rdfs:domain sockg_class:State ;
-                      rdfs:range sockg_class:County .
-
-
-###  https://JuanG5423.github.io/docs/classes/hasField
-sockg_class:hasField rdf:type owl:ObjectProperty ;
-                     rdfs:domain sockg_class:Site ;
-                     rdfs:range sockg_class:Field .
-
-
-###  https://JuanG5423.github.io/docs/classes/hasGasNutrientData
-sockg_class:hasGasNutrientData rdf:type owl:ObjectProperty ;
-                               rdfs:domain sockg_class:GasNutrientLoss ;
-                               rdfs:range sockg_class:ExperimentalUnit .
-
-
-###  https://JuanG5423.github.io/docs/classes/hasGasSample
-sockg_class:hasGasSample rdf:type owl:ObjectProperty ;
-                         rdfs:domain sockg_class:ExperimentalUnit ;
-                         rdfs:range sockg_class:GasSample .
-
-
-###  https://JuanG5423.github.io/docs/classes/hasGrazingData
-sockg_class:hasGrazingData rdf:type owl:ObjectProperty ;
-                           rdfs:domain sockg_class:ExperimentalUnit ;
-                           rdfs:range sockg_class:Grazing .
-
-
-###  https://JuanG5423.github.io/docs/classes/hasGrazingManagementEvent
-sockg_class:hasGrazingManagementEvent rdf:type owl:ObjectProperty ;
-                                      rdfs:domain sockg_class:ExperimentalUnit ;
-                                      rdfs:range sockg_class:GrazingManagementEvent .
-
-
-###  https://JuanG5423.github.io/docs/classes/hasHarvestFractionData
-sockg_class:hasHarvestFractionData rdf:type owl:ObjectProperty ;
+###  https://JuanG5423.github.io/docs/objectproperties/hasAmendment
+sockg_object_property:hasAmendment rdf:type owl:ObjectProperty ;
                                    rdfs:domain sockg_class:ExperimentalUnit ;
-                                   rdfs:range sockg_class:HarvestFraction .
+                                   rdfs:range sockg_class:Amendment .
 
 
-###  https://JuanG5423.github.io/docs/classes/hasMiscellaneousMeasurement
-sockg_class:hasMiscellaneousMeasurement rdf:type owl:ObjectProperty ;
-                                        rdfs:domain sockg_class:ExperimentalUnit ;
-                                        rdfs:range sockg_class:MiscellaneousMeasurement .
+###  https://JuanG5423.github.io/docs/objectproperties/hasBioMassCarbohydrateData
+sockg_object_property:hasBioMassCarbohydrateData rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain sockg_class:ExperimentalUnit ;
+                                                 rdfs:range sockg_class:BioMassCarbohydrate .
 
 
-###  https://JuanG5423.github.io/docs/classes/hasPesticide
-sockg_class:hasPesticide rdf:type owl:ObjectProperty ;
-                         rdfs:domain sockg_class:Amendment ;
-                         rdfs:range sockg_class:Pesticide .
+###  https://JuanG5423.github.io/docs/objectproperties/hasBioMassEnergyData
+sockg_object_property:hasBioMassEnergyData rdf:type owl:ObjectProperty ;
+                                           rdfs:domain sockg_class:ExperimentalUnit ;
+                                           rdfs:range sockg_class:BioMassEnergy .
 
 
-###  https://JuanG5423.github.io/docs/classes/hasPhySample
-sockg_class:hasPhySample rdf:type owl:ObjectProperty ;
-                         rdfs:domain sockg_class:ExperimentalUnit ;
-                         rdfs:range sockg_class:SoilPhysicalSample .
+###  https://JuanG5423.github.io/docs/objectproperties/hasBioMassMineralData
+sockg_object_property:hasBioMassMineralData rdf:type owl:ObjectProperty ;
+                                            rdfs:domain sockg_class:ExperimentalUnit ;
+                                            rdfs:range sockg_class:BioMassMineral .
 
 
-###  https://JuanG5423.github.io/docs/classes/hasResidueManagementEvent
-sockg_class:hasResidueManagementEvent rdf:type owl:ObjectProperty ;
-                                      rdfs:domain sockg_class:ExperimentalUnit ;
-                                      rdfs:range sockg_class:ResidueManagementEvent .
+###  https://JuanG5423.github.io/docs/objectproperties/hasBioSample
+sockg_object_property:hasBioSample rdf:type owl:ObjectProperty ;
+                                   rdfs:domain sockg_class:ExperimentalUnit ;
+                                   rdfs:range sockg_class:SoilBiologicalSample .
 
 
-###  https://JuanG5423.github.io/docs/classes/hasRotation
-sockg_class:hasRotation rdf:type owl:ObjectProperty ;
-                        rdfs:domain sockg_class:Treatment ;
-                        rdfs:range sockg_class:Rotation .
+###  https://JuanG5423.github.io/docs/objectproperties/hasChemSample
+sockg_object_property:hasChemSample rdf:type owl:ObjectProperty ;
+                                    rdfs:domain sockg_class:ExperimentalUnit ;
+                                    rdfs:range sockg_class:SoilChemicalSample .
 
 
-###  https://JuanG5423.github.io/docs/classes/hasSoilCover
-sockg_class:hasSoilCover rdf:type owl:ObjectProperty ;
-                         rdfs:domain sockg_class:ExperimentalUnit ;
-                         rdfs:range sockg_class:SoilCover .
+###  https://JuanG5423.github.io/docs/objectproperties/hasCity
+sockg_object_property:hasCity rdf:type owl:ObjectProperty ;
+                              rdfs:domain sockg_class:County ;
+                              rdfs:range sockg_class:City .
 
 
-###  https://JuanG5423.github.io/docs/classes/hasState
-sockg_class:hasState rdf:type owl:ObjectProperty ;
-                     rdfs:domain sockg_class:Country ;
-                     rdfs:range sockg_class:State .
+###  https://JuanG5423.github.io/docs/objectproperties/hasCounty
+sockg_object_property:hasCounty rdf:type owl:ObjectProperty ;
+                                rdfs:domain sockg_class:State ;
+                                rdfs:range sockg_class:County .
 
 
-###  https://JuanG5423.github.io/docs/classes/hasTillage
-sockg_class:hasTillage rdf:type owl:ObjectProperty ;
-                       rdfs:domain sockg_class:ExperimentalUnit ;
-                       rdfs:range sockg_class:Tillage .
+###  https://JuanG5423.github.io/docs/objectproperties/hasField
+sockg_object_property:hasField rdf:type owl:ObjectProperty ;
+                               rdfs:domain sockg_class:Site ;
+                               rdfs:range sockg_class:Field .
 
 
-###  https://JuanG5423.github.io/docs/classes/hasTreatment
-sockg_class:hasTreatment rdf:type owl:ObjectProperty ;
-                         rdfs:domain sockg_class:Experiment ;
-                         rdfs:range sockg_class:Treatment .
+###  https://JuanG5423.github.io/docs/objectproperties/hasGasNutrientData
+sockg_object_property:hasGasNutrientData rdf:type owl:ObjectProperty ;
+                                         rdfs:domain sockg_class:GasNutrientLoss ;
+                                         rdfs:range sockg_class:ExperimentalUnit .
 
 
-###  https://JuanG5423.github.io/docs/classes/hasWaterQualityAreaData
-sockg_class:hasWaterQualityAreaData rdf:type owl:ObjectProperty ;
-                                    rdfs:domain sockg_class:WaterQualityArea ;
-                                    rdfs:range sockg_class:ExperimentalUnit .
+###  https://JuanG5423.github.io/docs/objectproperties/hasGasSample
+sockg_object_property:hasGasSample rdf:type owl:ObjectProperty ;
+                                   rdfs:domain sockg_class:ExperimentalUnit ;
+                                   rdfs:range sockg_class:GasSample .
 
 
-###  https://JuanG5423.github.io/docs/classes/hasWaterQualityConcData
-sockg_class:hasWaterQualityConcData rdf:type owl:ObjectProperty ;
-                                    rdfs:domain sockg_class:WaterQualityConc ;
-                                    rdfs:range sockg_class:ExperimentalUnit .
+###  https://JuanG5423.github.io/docs/objectproperties/hasGrazingData
+sockg_object_property:hasGrazingData rdf:type owl:ObjectProperty ;
+                                     rdfs:domain sockg_class:ExperimentalUnit ;
+                                     rdfs:range sockg_class:Grazing .
 
 
-###  https://JuanG5423.github.io/docs/classes/hasWindErosionData
-sockg_class:hasWindErosionData rdf:type owl:ObjectProperty ;
-                               rdfs:domain sockg_class:WindErosionArea ;
-                               rdfs:range sockg_class:ExperimentalUnit .
+###  https://JuanG5423.github.io/docs/objectproperties/hasGrazingManagementEvent
+sockg_object_property:hasGrazingManagementEvent rdf:type owl:ObjectProperty ;
+                                                rdfs:domain sockg_class:ExperimentalUnit ;
+                                                rdfs:range sockg_class:GrazingManagementEvent .
 
 
-###  https://JuanG5423.github.io/docs/classes/hasYieldNutrUptakeData
-sockg_class:hasYieldNutrUptakeData rdf:type owl:ObjectProperty ;
-                                   rdfs:domain sockg_class:YieldNutrientUptake ;
-                                   rdfs:range sockg_class:ExperimentalUnit .
+###  https://JuanG5423.github.io/docs/objectproperties/hasHarvestFractionData
+sockg_object_property:hasHarvestFractionData rdf:type owl:ObjectProperty ;
+                                             rdfs:domain sockg_class:ExperimentalUnit ;
+                                             rdfs:range sockg_class:HarvestFraction .
 
 
-###  https://JuanG5423.github.io/docs/classes/isAuthorOfPublication
-sockg_class:isAuthorOfPublication rdf:type owl:ObjectProperty ;
-                                  rdfs:domain sockg_class:Person ;
-                                  rdfs:range sockg_class:Publication .
+###  https://JuanG5423.github.io/docs/objectproperties/hasMiscellaneousMeasurement
+sockg_object_property:hasMiscellaneousMeasurement rdf:type owl:ObjectProperty ;
+                                                  rdfs:domain sockg_class:ExperimentalUnit ;
+                                                  rdfs:range sockg_class:MiscellaneousMeasurement .
 
 
-###  https://JuanG5423.github.io/docs/classes/isChapterOf
-sockg_class:isChapterOf rdf:type owl:ObjectProperty ;
-                        rdfs:domain sockg_class:Publication ;
-                        rdfs:range sockg_class:Book .
+###  https://JuanG5423.github.io/docs/objectproperties/hasPesticide
+sockg_object_property:hasPesticide rdf:type owl:ObjectProperty ;
+                                   rdfs:domain sockg_class:Amendment ;
+                                   rdfs:range sockg_class:Pesticide .
 
 
-###  https://JuanG5423.github.io/docs/classes/isCorrespondingAuthor
-sockg_class:isCorrespondingAuthor rdf:type owl:ObjectProperty ;
-                                  rdfs:domain sockg_class:Person ;
-                                  rdfs:range sockg_class:Publication .
+###  https://JuanG5423.github.io/docs/objectproperties/hasPhySample
+sockg_object_property:hasPhySample rdf:type owl:ObjectProperty ;
+                                   rdfs:domain sockg_class:ExperimentalUnit ;
+                                   rdfs:range sockg_class:SoilPhysicalSample .
 
 
-###  https://JuanG5423.github.io/docs/classes/isHarvested
-sockg_class:isHarvested rdf:type owl:ObjectProperty ;
-                        rdfs:domain sockg_class:ExperimentalUnit ;
-                        rdfs:range sockg_class:Harvest .
+###  https://JuanG5423.github.io/docs/objectproperties/hasResidueManagementEvent
+sockg_object_property:hasResidueManagementEvent rdf:type owl:ObjectProperty ;
+                                                rdfs:domain sockg_class:ExperimentalUnit ;
+                                                rdfs:range sockg_class:ResidueManagementEvent .
 
 
-###  https://JuanG5423.github.io/docs/classes/locatedInCity
-sockg_class:locatedInCity rdf:type owl:ObjectProperty ;
-                          rdfs:domain sockg_class:Site ;
-                          rdfs:range sockg_class:City .
+###  https://JuanG5423.github.io/docs/objectproperties/hasRotation
+sockg_object_property:hasRotation rdf:type owl:ObjectProperty ;
+                                  rdfs:domain sockg_class:Treatment ;
+                                  rdfs:range sockg_class:Rotation .
 
 
-###  https://JuanG5423.github.io/docs/classes/locatedInCountry
-sockg_class:locatedInCountry rdf:type owl:ObjectProperty ;
-                             rdfs:domain sockg_class:Site ;
-                             rdfs:range sockg_class:Country .
+###  https://JuanG5423.github.io/docs/objectproperties/hasSoilCover
+sockg_object_property:hasSoilCover rdf:type owl:ObjectProperty ;
+                                   rdfs:domain sockg_class:ExperimentalUnit ;
+                                   rdfs:range sockg_class:SoilCover .
 
 
-###  https://JuanG5423.github.io/docs/classes/locatedInCounty
-sockg_class:locatedInCounty rdf:type owl:ObjectProperty ;
-                            rdfs:domain sockg_class:Site ;
-                            rdfs:range sockg_class:County .
+###  https://JuanG5423.github.io/docs/objectproperties/hasState
+sockg_object_property:hasState rdf:type owl:ObjectProperty ;
+                               rdfs:domain sockg_class:Country ;
+                               rdfs:range sockg_class:State .
 
 
-###  https://JuanG5423.github.io/docs/classes/locatedInField
-sockg_class:locatedInField rdf:type owl:ObjectProperty ;
-                           rdfs:domain sockg_class:ExperimentalUnit ;
-                           rdfs:range sockg_class:Field .
+###  https://JuanG5423.github.io/docs/objectproperties/hasTillage
+sockg_object_property:hasTillage rdf:type owl:ObjectProperty ;
+                                 rdfs:domain sockg_class:ExperimentalUnit ;
+                                 rdfs:range sockg_class:Tillage .
 
 
-###  https://JuanG5423.github.io/docs/classes/locatedInState
-sockg_class:locatedInState rdf:type owl:ObjectProperty ;
-                           rdfs:domain sockg_class:Site ;
-                           rdfs:range sockg_class:State .
+###  https://JuanG5423.github.io/docs/objectproperties/hasTreatment
+sockg_object_property:hasTreatment rdf:type owl:ObjectProperty ;
+                                   rdfs:domain sockg_class:Experiment ;
+                                   rdfs:range sockg_class:Treatment .
 
 
-###  https://JuanG5423.github.io/docs/classes/plantingAt
-sockg_class:plantingAt rdf:type owl:ObjectProperty ;
-                       rdfs:domain sockg_class:PlantingEvent ;
-                       rdfs:range sockg_class:ExperimentalUnit .
+###  https://JuanG5423.github.io/docs/objectproperties/hasWaterQualityAreaData
+sockg_object_property:hasWaterQualityAreaData rdf:type owl:ObjectProperty ;
+                                              rdfs:domain sockg_class:WaterQualityArea ;
+                                              rdfs:range sockg_class:ExperimentalUnit .
 
 
-###  https://JuanG5423.github.io/docs/classes/recordsWeatherForField
-sockg_class:recordsWeatherForField rdf:type owl:ObjectProperty ;
-                                   rdfs:domain sockg_class:WeatherStation ;
-                                   rdfs:range sockg_class:Field .
+###  https://JuanG5423.github.io/docs/objectproperties/hasWaterQualityConcData
+sockg_object_property:hasWaterQualityConcData rdf:type owl:ObjectProperty ;
+                                              rdfs:domain sockg_class:WaterQualityConc ;
+                                              rdfs:range sockg_class:ExperimentalUnit .
 
 
-###  https://JuanG5423.github.io/docs/classes/recordsWeatherForSite
-sockg_class:recordsWeatherForSite rdf:type owl:ObjectProperty ;
-                                  rdfs:domain sockg_class:WeatherStation ;
+###  https://JuanG5423.github.io/docs/objectproperties/hasWindErosionData
+sockg_object_property:hasWindErosionData rdf:type owl:ObjectProperty ;
+                                         rdfs:domain sockg_class:WindErosionArea ;
+                                         rdfs:range sockg_class:ExperimentalUnit .
+
+
+###  https://JuanG5423.github.io/docs/objectproperties/hasYieldNutrUptakeData
+sockg_object_property:hasYieldNutrUptakeData rdf:type owl:ObjectProperty ;
+                                             rdfs:domain sockg_class:YieldNutrientUptake ;
+                                             rdfs:range sockg_class:ExperimentalUnit .
+
+
+###  https://JuanG5423.github.io/docs/objectproperties/isAuthorOfPublication
+sockg_object_property:isAuthorOfPublication rdf:type owl:ObjectProperty ;
+                                            rdfs:domain sockg_class:Person ;
+                                            rdfs:range sockg_class:Publication .
+
+
+###  https://JuanG5423.github.io/docs/objectproperties/isChapterOf
+sockg_object_property:isChapterOf rdf:type owl:ObjectProperty ;
+                                  rdfs:domain sockg_class:Publication ;
+                                  rdfs:range sockg_class:Book .
+
+
+###  https://JuanG5423.github.io/docs/objectproperties/isCorrespondingAuthor
+sockg_object_property:isCorrespondingAuthor rdf:type owl:ObjectProperty ;
+                                            rdfs:domain sockg_class:Person ;
+                                            rdfs:range sockg_class:Publication .
+
+
+###  https://JuanG5423.github.io/docs/objectproperties/isHarvested
+sockg_object_property:isHarvested rdf:type owl:ObjectProperty ;
+                                  rdfs:domain sockg_class:ExperimentalUnit ;
+                                  rdfs:range sockg_class:Harvest .
+
+
+###  https://JuanG5423.github.io/docs/objectproperties/locatedInCity
+sockg_object_property:locatedInCity rdf:type owl:ObjectProperty ;
+                                    rdfs:domain sockg_class:Site ;
+                                    rdfs:range sockg_class:City .
+
+
+###  https://JuanG5423.github.io/docs/objectproperties/locatedInCountry
+sockg_object_property:locatedInCountry rdf:type owl:ObjectProperty ;
+                                       rdfs:domain sockg_class:Site ;
+                                       rdfs:range sockg_class:Country .
+
+
+###  https://JuanG5423.github.io/docs/objectproperties/locatedInCounty
+sockg_object_property:locatedInCounty rdf:type owl:ObjectProperty ;
+                                      rdfs:domain sockg_class:Site ;
+                                      rdfs:range sockg_class:County .
+
+
+###  https://JuanG5423.github.io/docs/objectproperties/locatedInField
+sockg_object_property:locatedInField rdf:type owl:ObjectProperty ;
+                                     rdfs:domain sockg_class:ExperimentalUnit ;
+                                     rdfs:range sockg_class:Field .
+
+
+###  https://JuanG5423.github.io/docs/objectproperties/locatedInState
+sockg_object_property:locatedInState rdf:type owl:ObjectProperty ;
+                                     rdfs:domain sockg_class:Site ;
+                                     rdfs:range sockg_class:State .
+
+
+###  https://JuanG5423.github.io/docs/objectproperties/plantingAt
+sockg_object_property:plantingAt rdf:type owl:ObjectProperty ;
+                                 rdfs:domain sockg_class:PlantingEvent ;
+                                 rdfs:range sockg_class:ExperimentalUnit .
+
+
+###  https://JuanG5423.github.io/docs/objectproperties/recordsWeatherForField
+sockg_object_property:recordsWeatherForField rdf:type owl:ObjectProperty ;
+                                             rdfs:domain sockg_class:WeatherStation ;
+                                             rdfs:range sockg_class:Field .
+
+
+###  https://JuanG5423.github.io/docs/objectproperties/recordsWeatherForSite
+sockg_object_property:recordsWeatherForSite rdf:type owl:ObjectProperty ;
+                                            rdfs:domain sockg_class:WeatherStation ;
+                                            rdfs:range sockg_class:Site .
+
+
+###  https://JuanG5423.github.io/docs/objectproperties/studiesSite
+sockg_object_property:studiesSite rdf:type owl:ObjectProperty ;
+                                  rdfs:domain sockg_class:Publication ;
                                   rdfs:range sockg_class:Site .
 
 
-###  https://JuanG5423.github.io/docs/classes/studiesSite
-sockg_class:studiesSite rdf:type owl:ObjectProperty ;
-                        rdfs:domain sockg_class:Publication ;
-                        rdfs:range sockg_class:Site .
+###  https://JuanG5423.github.io/docs/objectproperties/tracksGrowth
+sockg_object_property:tracksGrowth rdf:type owl:ObjectProperty ;
+                                   rdfs:domain sockg_class:ExperimentalUnit ;
+                                   rdfs:range sockg_class:CropGrowthStage .
 
 
-###  https://JuanG5423.github.io/docs/classes/tracksGrowth
-sockg_class:tracksGrowth rdf:type owl:ObjectProperty ;
-                         rdfs:domain sockg_class:ExperimentalUnit ;
-                         rdfs:range sockg_class:CropGrowthStage .
+###  https://JuanG5423.github.io/docs/objectproperties/usedInExpUnit
+sockg_object_property:usedInExpUnit rdf:type owl:ObjectProperty ;
+                                    rdfs:domain sockg_class:Soil ;
+                                    rdfs:range sockg_class:ExperimentalUnit .
 
 
-###  https://JuanG5423.github.io/docs/classes/usedInExpUnit
-sockg_class:usedInExpUnit rdf:type owl:ObjectProperty ;
-                          rdfs:domain sockg_class:Soil ;
-                          rdfs:range sockg_class:ExperimentalUnit .
+###  https://JuanG5423.github.io/docs/objectproperties/wasNutrientDataAt
+sockg_object_property:wasNutrientDataAt rdf:type owl:ObjectProperty ;
+                                        rdfs:domain sockg_class:GasNutrientLoss ;
+                                        rdfs:range sockg_class:Field .
 
 
-###  https://JuanG5423.github.io/docs/classes/wasNutrientDataAt
-sockg_class:wasNutrientDataAt rdf:type owl:ObjectProperty ;
-                              rdfs:domain sockg_class:GasNutrientLoss ;
-                              rdfs:range sockg_class:Field .
+###  https://JuanG5423.github.io/docs/objectproperties/wasNutrientTreatment
+sockg_object_property:wasNutrientTreatment rdf:type owl:ObjectProperty ;
+                                           rdfs:domain sockg_class:GasNutrientLoss ;
+                                           rdfs:range sockg_class:Treatment .
 
 
-###  https://JuanG5423.github.io/docs/classes/wasNutrientTreatment
-sockg_class:wasNutrientTreatment rdf:type owl:ObjectProperty ;
-                                 rdfs:domain sockg_class:GasNutrientLoss ;
-                                 rdfs:range sockg_class:Treatment .
+###  https://JuanG5423.github.io/docs/objectproperties/waterQualityAreaDataAt
+sockg_object_property:waterQualityAreaDataAt rdf:type owl:ObjectProperty ;
+                                             rdfs:domain sockg_class:WaterQualityArea ;
+                                             rdfs:range sockg_class:Field .
 
 
-###  https://JuanG5423.github.io/docs/classes/waterQualityAreaDataAt
-sockg_class:waterQualityAreaDataAt rdf:type owl:ObjectProperty ;
-                                   rdfs:domain sockg_class:WaterQualityArea ;
-                                   rdfs:range sockg_class:Field .
+###  https://JuanG5423.github.io/docs/objectproperties/waterQualityAreaTreatment
+sockg_object_property:waterQualityAreaTreatment rdf:type owl:ObjectProperty ;
+                                                rdfs:domain sockg_class:WaterQualityArea ;
+                                                rdfs:range sockg_class:Treatment .
 
 
-###  https://JuanG5423.github.io/docs/classes/waterQualityAreaTreatment
-sockg_class:waterQualityAreaTreatment rdf:type owl:ObjectProperty ;
-                                      rdfs:domain sockg_class:WaterQualityArea ;
-                                      rdfs:range sockg_class:Treatment .
+###  https://JuanG5423.github.io/docs/objectproperties/waterQualityConcDataAt
+sockg_object_property:waterQualityConcDataAt rdf:type owl:ObjectProperty ;
+                                             rdfs:domain sockg_class:WaterQualityConc ;
+                                             rdfs:range sockg_class:Field .
 
 
-###  https://JuanG5423.github.io/docs/classes/waterQualityConcDataAt
-sockg_class:waterQualityConcDataAt rdf:type owl:ObjectProperty ;
-                                   rdfs:domain sockg_class:WaterQualityConc ;
-                                   rdfs:range sockg_class:Field .
+###  https://JuanG5423.github.io/docs/objectproperties/waterQualityConcTreatment
+sockg_object_property:waterQualityConcTreatment rdf:type owl:ObjectProperty ;
+                                                rdfs:domain sockg_class:WaterQualityConc ;
+                                                rdfs:range sockg_class:Treatment .
 
 
-###  https://JuanG5423.github.io/docs/classes/waterQualityConcTreatment
-sockg_class:waterQualityConcTreatment rdf:type owl:ObjectProperty ;
-                                      rdfs:domain sockg_class:WaterQualityConc ;
-                                      rdfs:range sockg_class:Treatment .
+###  https://JuanG5423.github.io/docs/objectproperties/weatherAtField
+sockg_object_property:weatherAtField rdf:type owl:ObjectProperty ;
+                                     rdfs:domain sockg_class:WeatherObservation ;
+                                     rdfs:range sockg_class:Field .
 
 
-###  https://JuanG5423.github.io/docs/classes/weatherAtField
-sockg_class:weatherAtField rdf:type owl:ObjectProperty ;
-                           rdfs:domain sockg_class:WeatherObservation ;
-                           rdfs:range sockg_class:Field .
+###  https://JuanG5423.github.io/docs/objectproperties/weatherRecordedAt
+sockg_object_property:weatherRecordedAt rdf:type owl:ObjectProperty ;
+                                        rdfs:domain sockg_class:WeatherObservation ;
+                                        rdfs:range sockg_class:Site .
 
 
-###  https://JuanG5423.github.io/docs/classes/weatherRecordedAt
-sockg_class:weatherRecordedAt rdf:type owl:ObjectProperty ;
-                              rdfs:domain sockg_class:WeatherObservation ;
+###  https://JuanG5423.github.io/docs/objectproperties/weatherRecordedBy
+sockg_object_property:weatherRecordedBy rdf:type owl:ObjectProperty ;
+                                        rdfs:domain sockg_class:WeatherStation ;
+                                        rdfs:range sockg_class:WeatherObservation .
+
+
+###  https://JuanG5423.github.io/docs/objectproperties/windErosionDataAt
+sockg_object_property:windErosionDataAt rdf:type owl:ObjectProperty ;
+                                        rdfs:domain sockg_class:WindErosionArea ;
+                                        rdfs:range sockg_class:Field .
+
+
+###  https://JuanG5423.github.io/docs/objectproperties/windErosionTreatment
+sockg_object_property:windErosionTreatment rdf:type owl:ObjectProperty ;
+                                           rdfs:domain sockg_class:WindErosionArea ;
+                                           rdfs:range sockg_class:Treatment .
+
+
+###  https://JuanG5423.github.io/docs/objectproperties/worksAtDepartment
+sockg_object_property:worksAtDepartment rdf:type owl:ObjectProperty ;
+                                        rdfs:domain sockg_class:Person ;
+                                        rdfs:range sockg_class:Department .
+
+
+###  https://JuanG5423.github.io/docs/objectproperties/worksFor
+sockg_object_property:worksFor rdf:type owl:ObjectProperty ;
+                               rdfs:domain sockg_class:Person ;
+                               rdfs:range sockg_class:Organization .
+
+
+###  https://JuanG5423.github.io/docs/objectproperties/worksIn
+sockg_object_property:worksIn rdf:type owl:ObjectProperty ;
+                              rdfs:domain sockg_class:Person ;
                               rdfs:range sockg_class:Site .
 
 
-###  https://JuanG5423.github.io/docs/classes/weatherRecordedBy
-sockg_class:weatherRecordedBy rdf:type owl:ObjectProperty ;
-                              rdfs:domain sockg_class:WeatherStation ;
-                              rdfs:range sockg_class:WeatherObservation .
+###  https://JuanG5423.github.io/docs/objectproperties/yieldNutrUptakeDataAt
+sockg_object_property:yieldNutrUptakeDataAt rdf:type owl:ObjectProperty ;
+                                            rdfs:domain sockg_class:YieldNutrientUptake ;
+                                            rdfs:range sockg_class:Field .
 
 
-###  https://JuanG5423.github.io/docs/classes/windErosionDataAt
-sockg_class:windErosionDataAt rdf:type owl:ObjectProperty ;
-                              rdfs:domain sockg_class:WindErosionArea ;
-                              rdfs:range sockg_class:Field .
-
-
-###  https://JuanG5423.github.io/docs/classes/windErosionTreatment
-sockg_class:windErosionTreatment rdf:type owl:ObjectProperty ;
-                                 rdfs:domain sockg_class:WindErosionArea ;
-                                 rdfs:range sockg_class:Treatment .
-
-
-###  https://JuanG5423.github.io/docs/classes/worksAtDepartment
-sockg_class:worksAtDepartment rdf:type owl:ObjectProperty ;
-                              rdfs:domain sockg_class:Person ;
-                              rdfs:range sockg_class:Department .
-
-
-###  https://JuanG5423.github.io/docs/classes/worksFor
-sockg_class:worksFor rdf:type owl:ObjectProperty ;
-                     rdfs:domain sockg_class:Person ;
-                     rdfs:range sockg_class:Organization .
-
-
-###  https://JuanG5423.github.io/docs/classes/worksIn
-sockg_class:worksIn rdf:type owl:ObjectProperty ;
-                    rdfs:domain sockg_class:Person ;
-                    rdfs:range sockg_class:Site .
-
-
-###  https://JuanG5423.github.io/docs/classes/yieldNutrUptakeDataAt
-sockg_class:yieldNutrUptakeDataAt rdf:type owl:ObjectProperty ;
-                                  rdfs:domain sockg_class:YieldNutrientUptake ;
-                                  rdfs:range sockg_class:Field .
-
-
-###  https://JuanG5423.github.io/docs/classes/yieldNutrUptakeTreatment
-sockg_class:yieldNutrUptakeTreatment rdf:type owl:ObjectProperty ;
-                                     rdfs:domain sockg_class:YieldNutrientUptake ;
-                                     rdfs:range sockg_class:Treatment .
+###  https://JuanG5423.github.io/docs/objectproperties/yieldNutrUptakeTreatment
+sockg_object_property:yieldNutrUptakeTreatment rdf:type owl:ObjectProperty ;
+                                               rdfs:domain sockg_class:YieldNutrientUptake ;
+                                               rdfs:range sockg_class:Treatment .
 
 
 #################################################################
